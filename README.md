@@ -36,7 +36,7 @@ Build an application that will be a directory of companies, and the people who h
 3. Add ability to create a new company
 <br />
 <br />
-![step 1](mockups/Step_1.png)
+![step 1][Step_1.png]
 
 ### Part 2 : Companies Create
 
