@@ -35,8 +35,8 @@ Build an application that will be a directory of companies, and the people who h
   * Short Description
 3. Add ability to create a new company
 <br />
-<br />
-![step 1][Step_1.png]
+
+![step 1](Step_1.png)
 
 ### Part 2 : Companies Create
 
@@ -47,9 +47,8 @@ Build an application that will be a directory of companies, and the people who h
     * Company Description __required__
     * Founded Date
 <br />
-<br />
-![step 2](mockups/Step_2.png)
-    
+
+![step 2](Step_2.png)
 
 ### Part 3 : Company Details
 
@@ -57,8 +56,8 @@ Build an application that will be a directory of companies, and the people who h
 2. Ability to update company
 3. Ability to delete company
 <br />
-<br />
-![step 3](mockups/Step_3.png)
+
+![step 3](Step_3.png)
 
 ### Part 4 : Founders
 
@@ -69,8 +68,8 @@ Build an application that will be a directory of companies, and the people who h
     * Founder Title
 4. Founders added should display in the company detail page.
 <br />
-<br />
-![step 4](mockups/Step_4.png)
+
+![step 4](Step_4.png)
 
 ### Part 5 : Tags
 
@@ -78,8 +77,8 @@ Build an application that will be a directory of companies, and the people who h
 2. Each category can belong to a number of different companies.
 3. Tags added should appear in the company detail page.
 <br />
-<br />
-![step 5](mockups/Step_5.png)
+
+![step 5](Step_5.png)
 
 
 ### Part 6 : Stretch Challenge
