@@ -1,4 +1,4 @@
-# Techstars Engineering Coding Challenge
+# Techstars Engineering Fun with Code
 
 The Techstars Engineering team would like to congratulate you on making it to our coding challenge. This is your chance to show the team how you approach problems and give them insight into your ability to code. For the challenge, you will be required to design, develop, and style an MVC application. Feel free to use any third party libraries you see fit. Low-fi mockups have been provided, but please feel free to take your own artistic direction. You will have **one week** from the time you are granted access to this repository to submit a solution for the given requirements. Please read all the instructions carefully and email us if you have any questions. Good luck, but most of all have fun - this is your chance to demonstrate what you can do. 
 
