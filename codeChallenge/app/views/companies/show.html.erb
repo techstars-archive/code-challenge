@@ -1,0 +1,9 @@
+<div class="panel panel-default">
+  <div class="panel-body">
+    <%= link_to 'Back', companies_path, class: 'btn btn-info pull-right' %>
+    <h2><%= @company.name %></h2>
+    <%= link_to 'Edit', edit_company_path(@company), class: 'btn btn-primary' %>
+    <%= link_to 'Delete', @company, method: :delete, confirm: "Are you sure?", class: 'btn btn-danger' %>
+    <p><%= @company.description %></p>
+  </div>
+</div>
