@@ -6,6 +6,7 @@ class CompaniesController < ApplicationController
 
   def new
     @company = Company.new
+    @company.build_location
   end
 
   def create
@@ -42,7 +43,7 @@ class CompaniesController < ApplicationController
   private
 
   def company_params
-    params.require(:company).permit(:name, :description, :founded_date)
+    params.require(:company).permit(:name, :description, :founded_date, location_attributes: [:id, :city, :state, :_destroy])
   end
 
 end

@@ -3,7 +3,10 @@
     <div class="panel-body">
       <%= link_to 'More', company_path(company.id), class: 'btn btn-info pull-right' %>
       <h2><%= company.name %></h2>
+      <p><%= company.founded_date %></p>
       <p><%= company.description %></p>
+      <p><%= company.location.city %></p>
+      <p><%= company.location.state %></p>
     </div>
   </div>
 <% end %>
