@@ -1,62 +1,13 @@
-<%= form_for @company, :html => { :class => "form-horizontal" } do |f| %>
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/">Home</a></li>
+  <li class="breadcrumb-item active">New Company</li>
+</ol>
 
-  <%= f.fields_for :location, @company.location do |location_form| %>
-    <div class="form-group" %>
-      <%= location_form.label :city, :class => 'col-sm-2 control-label' %>
-      <div class="col-sm-10">
-        <%= location_form.text_field :city, :class => 'form-control' %>
-      </div>
-    </div>
+<div class="row text-center bottom-space">
+  <h3>Create Your Company Profile</h3>
+</div>
 
-    <div class="form-group" %>
-      <%= location_form.label :state, :class => 'col-sm-2 control-label' %>
-      <div class="col-sm-10">
-        <%= location_form.text_field :state, :class => 'form-control' %>
-      </div>
-    </div>
-  <% end %>
+<div class="panel panel-default">
+  <div class="panel-body">
 
-  <% if @company.errors.any? %>
-    <div class="alert alert-danger alert-dismissable">
-      <button aria-hidden="true" class="close" data-dismiss="alert" type="button">&times;</button>
-      <h4>
-        <%= "#{pluralize(@company.errors.count, "error")} prohibited this company from being saved:" %>
-      </h4>
-      <ul>
-        <% @company.errors.full_messages.each do |msg| %>
-          <li>
-            <%= msg %>
-          </li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="form-group" %>
-    <%= f.label :name, :class => 'col-sm-2 control-label' %>
-    <div class="col-sm-10">
-      <%= f.text_field :name, :class => 'form-control' %>
-    </div>
-  </div>
-
-  <div class="form-group" %>
-    <%= f.label :description, :class => 'col-sm-2 control-label' %>
-    <div class="col-sm-10">
-      <%= f.text_field :description, :class => 'form-control' %>
-    </div>
-  </div>
-
-    <div class="form-group" %>
-    <%= f.label :founded_date, :class => 'col-sm-2 control-label' %>
-    <div class="col-sm-10">
-      <%= f.date_field :founded_date, :class => 'form-control' %>
-    </div>
-  </div>
-
-
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-      <%= f.submit :class => 'btn btn-primary' %>
-    </div>
-  </div>
-<% end %>
+<%= render 'form' %>

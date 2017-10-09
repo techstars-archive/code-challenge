@@ -1,12 +1,15 @@
 require "rails_helper"
 
 describe CompaniesController do
-
+  
   describe "GET #index" do
     it "Should render the Company Index View" do
 
-      company1 = Company.create(name: "Audrey's Farm", description: "coco, butter")
-      company2 = Company.create(name: "Zoey's Zoo", description: "flour, butter")
+      location1 = Location.create(city: "SF", state: "CA", company_id: 1)
+      location2 = Location.create(city: "Pacifica", state: "CA", company_id: 2)
+
+      company1 = Company.create(name: "Audrey's Farm", description: "A farm full of horses.", location: location1, id: 1)
+      company2 = Company.create(name: "Zoey's Zoo", description: "A zoo full of animals.", location: location2, id: 2)
 
       get :index
       
@@ -19,7 +22,8 @@ describe CompaniesController do
   describe "GET #show" do
     it "shows an individual company" do
 
-      company1 = Company.create(name: "Audrey's Farm", description: "coco, butter", id: 1)
+      location1 = Location.create(city: "SF", state: "CA", company_id: 1)
+      company1 = Company.create(name: "Audrey's Farm", description: "A farm full of horses", id: 1)
 
       get :show, id: 1
 
@@ -54,6 +58,7 @@ describe CompaniesController do
   describe "GET #edit" do
     it "allows edit of a company" do 
 
+      location = Location.create(city: "Pacifica", state: "CA", company_id: 2)
       company = Company.create(id: 2, name: "starfleet.io", description: "We love Star Trek here.")
 
       get :edit, id: 2
@@ -67,6 +72,7 @@ describe CompaniesController do
   describe "PATCH update" do
     it "updates a company" do
 
+      location = Location.create(city: "Pacifica", state: "CA", company_id: 2)
       company = Company.create(id: 2, name: "starfleet.io", description: "We love Star Trek here.")
         
       patch :update, id: 2, company: {name: "starfleet.io", description: "This description is updated."}
@@ -78,10 +84,10 @@ describe CompaniesController do
   end
 
   describe "DESTROY" do
-
     it "allows for deletion of a company" do
 
-      company = Company.create(name: "starfleet.io", description: "We love Star Trek here.")
+      location = Location.create(city: "Pacifica", state: "CA", company_id: 2)
+      company = Company.create(name: "starfleet.io", description: "We love Star Trek here.", id: 2)
 
       delete :destroy, id: company.id
 

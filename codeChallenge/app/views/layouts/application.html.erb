@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>CodeChallenge</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <div id="main-container" class="container">
+  <head>
+    <title>CodeChallenge</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div id="main-container" class="container">
       <div class="row">
         <div class="col-s12">
           <%= yield %>
         </div>
       </div>
     </div>
-</body>
+  </body>
 </html>
