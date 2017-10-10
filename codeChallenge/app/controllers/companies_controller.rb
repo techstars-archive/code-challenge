@@ -33,6 +33,7 @@ class CompaniesController < ApplicationController
 
   def show
     @company = Company.find(params[:id])
+    @taggings = @company.tag_list.split(',')
   end
 
   def destroy

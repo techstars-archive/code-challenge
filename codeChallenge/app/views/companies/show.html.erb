@@ -30,7 +30,7 @@
       <h2 class="text-center">Founders</h2>
       <div class="row text-center">
         <% @company.founders.each do |founder| %>
-          <%= "#{founder.full_name} : ""#{founder.title}" %> 
+        <h5><span><%= "#{founder.full_name} : ""#{founder.title}" %></span></h5> 
         <% end %>
       </div>
       <%= link_to 'Add Founder', new_company_founder_path(@company.id), class: 'btn btn-info pull-right' %>
@@ -41,9 +41,11 @@
     <div class="panel-body">
       <h2 class="text-center">Categories</h2>
       <div class="row text-center">
-        <%= @company.tag_list%>
+        <% @taggings.each do |tag|%> 
+          <h4><span class="label label-default"><%= tag %></span></h4>
+        <%end %>
       </div>
-      <%= link_to 'Add Category', edit_company_path(@company.id), class: 'btn btn-info pull-right' %>
+      <%= link_to 'Add Category Tag', edit_company_path(@company.id), class: 'btn btn-info pull-right' %>
     </div>
   </div>
   

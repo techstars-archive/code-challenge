@@ -32,7 +32,7 @@
         <div class="form-group" %>
           <%= location_form.label :state, :class => 'col-sm-2 control-label' %>
           <div class="col-sm-10">
-            <%= location_form.text_field :state, :class => 'form-control' %>
+            <%= location_form.select(:state, options_for_select(us_states, "CA"))%> 
           </div>
         </div>
       <% end %>

@@ -10,6 +10,10 @@ Company.destroy_all
     state: Faker::Address.state,
     city:  Faker::Address.city
   ) 
+  company.founders << Founder.new(
+    full_name: Faker::Name.name,
+    title: Faker::Name.title
+  )
   company.save
 end
 
