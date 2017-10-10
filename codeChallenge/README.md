@@ -1,28 +1,42 @@
-== README
+## Company App ## 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**A Companies Application built using Rails-4.2.1 with the following features:**
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* CRUD operations for Companies
+* Founders associated with the Companies
+* Categories associated with the Companies
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+### Getting Started
+
+Fork, clone, and cd into the project directory
+
+
+Install the dependencies
+
+
+`bundle install`
+
+Create Database
+`rake db:create`
+
+Run Migrations
+`rake db:migrate`
+
+Seed your database with fake companies and founders
+
+
+`rake db:seed`
+
+Start up your server!
+`rails server`
+
+### Database Relationships / Associations
+
+##### Companies
+Companies have relationships with the following models in the database. 
+(*check schema.rb and the models to see associations.*)
+* Founder 
+* Location 
+* Category 
+* Tagging 
