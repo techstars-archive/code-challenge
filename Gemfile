@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
+gem 'faker'
+
 # Use sqlite3 as the database for Active Record
 group :production do
   gem 'pg', '~> 0.18.4'
@@ -50,7 +52,6 @@ group :development, :test do
   gem 'pry'
   gem 'spring'
   gem 'factory_girl_rails'
-  gem 'faker'
   gem 'shoulda', '~> 3.5'
   gem 'sqlite3', '~> 1.3', '>= 1.3.11'
 end
