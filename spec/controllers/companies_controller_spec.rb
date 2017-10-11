@@ -1,6 +1,11 @@
 require "rails_helper"
 
 describe CompaniesController do
+
+  before do 
+    Company.destroy_all
+    Location.destroy_all
+  end
   
   describe "GET #index" do
     it "Should render the Company Index View" do
@@ -46,9 +51,10 @@ describe CompaniesController do
 
   describe "POST #create" do
     it "creates new company" do
+
       expect {
         post :create,
-          company: {name: "emmy dogpark inc", description: "a dogpark for all dogs"}
+          company: {name: "emmy dogpark inc", description: "a dogpark for all dogs", location_attributes: {city: "Pacifica", state: "CO"}}
       }.to change {Company.all.count}.by(1)
       expect(response.status).to eq(302)
     end

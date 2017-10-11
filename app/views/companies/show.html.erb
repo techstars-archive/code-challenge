@@ -40,8 +40,8 @@
     <div class="panel-body">
       <h2 class="text-center">Categories</h2>
       <div class="row text-center">
-        <% @taggings.each do |tag|%> 
-          <h4><span class="label label-default"><%= tag %></span></h4>
+        <% @taggings.each do |tag|%>
+          <span class="label label-default"><%= tag %></span>
         <%end %>
       </div>
       <%= link_to 'Add Category Tag', edit_company_path(@company.id), class: 'btn btn-info pull-right' %>

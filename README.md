@@ -6,14 +6,11 @@
 * Founders associated with the Companies
 * Categories associated with the Companies
 
-
 ### Getting Started
 
 Fork, clone, and cd into the project directory
 
-
 Install the dependencies
-
 
 `bundle install`
 
@@ -24,7 +21,6 @@ Run Migrations
 `rake db:migrate`
 
 Seed your database with fake companies and founders
-
 
 `rake db:seed`
 
