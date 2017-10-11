@@ -25,4 +25,6 @@ test:
     <<: *default
     database: companiesandfounders_production
     username: companiesandfounders
-    password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
+    url: <%= ENV['DATABASE_URL'] %>
+    password: <%= ENV['MYAPP_DATABASE_PASSWORD'
+    ] %>
