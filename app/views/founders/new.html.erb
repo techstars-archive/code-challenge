@@ -1,0 +1,54 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/">Home</a></li>
+  <li class="breadcrumb-item"><%= link_to "#{@company.name}", company_path(@company.id)%></li>
+  <li class="breadcrumb-item active">Add Founder</li>
+</ol>
+
+<div class="row text-center bottom-space">
+  <h3>Add A Founder To Your Company</h3>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-body">
+
+    <%= form_for [@company, @founder], :html => { :class => "form-horizontal" } do |f| %>
+
+      <% if @founder.errors.any? %>
+        <div class="alert alert-danger alert-dismissable">
+          <button aria-hidden="true" class="close" data-dismiss="alert" type="button">&times;</button>
+          <h4>
+            <%= "#{pluralize(@company.errors.count, "error")} prohibited this company from being saved:" %>
+          </h4>
+          <ul>
+            <% @founder.errors.full_messages.each do |msg| %>
+              <li>
+                <%= msg %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="form-group" %>
+        <%= f.label :full_name, :class => 'col-sm-2 control-label' %>
+        <div class="col-sm-10">
+          <%= f.text_field :full_name, :class => 'form-control' %>
+        </div>
+      </div>
+
+      <div class="form-group" %>
+        <%= f.label :title, :class => 'col-sm-2 control-label' %>
+        <div class="col-sm-10">
+          <%= f.text_field :title, :class => 'form-control' %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <%= f.submit :class => 'btn btn-primary' %>
+        </div>
+      </div>
+      
+    <% end %>
+  </div>
+</div>

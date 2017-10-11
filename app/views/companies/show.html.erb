@@ -1,0 +1,51 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="/">Home</a></li>
+</ol>
+
+<div class="panel panel-default">
+
+  <div class="row top-space">
+    <div class="col-3 pull-right ">
+      <%= link_to 'Edit', edit_company_path(@company), class: 'btn btn-primary float-right' %>
+      <%= link_to 'Delete', @company, method: :delete, confirm: "Are you sure?", class: 'btn btn-danger float-right' %>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <div clas="row">
+      <h2 class="text-center"><%= @company.name %></h2>
+    </div>
+    <div class="row text-center">
+      <p> <%= "#{@company.founded_date.to_formatted_s(:long)} " "#{@company.location.city}, #{@company.location.state}" %></p>
+    </div>
+  </div>
+
+  <div class="row bottom-space">
+    <p class="text-center"><%= @company.description %></p>
+  </div>
+
+  <div class="panel panel-default founders-panel " >
+    <div class="panel-body">
+      <h2 class="text-center">Founders</h2>
+      <div class="row text-center">
+        <% @company.founders.each do |founder| %>
+        <h5><span><%= "#{founder.full_name} : ""#{founder.title}" %></span></h5> 
+        <% end %>
+      </div>
+      <%= link_to 'Add Founder', new_company_founder_path(@company.id), class: 'btn btn-info pull-right' %>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <h2 class="text-center">Categories</h2>
+      <div class="row text-center">
+        <% @taggings.each do |tag|%> 
+          <h4><span class="label label-default"><%= tag %></span></h4>
+        <%end %>
+      </div>
+      <%= link_to 'Add Category Tag', edit_company_path(@company.id), class: 'btn btn-info pull-right' %>
+    </div>
+  </div>
+  
+</div>

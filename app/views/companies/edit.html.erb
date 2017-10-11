@@ -1,0 +1,11 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><%= link_to "Home", companies_path%></li>
+  <li class="breadcrumb-item"><%= link_to "#{@company.name}", company_path(@company.id)%></li>
+  <li class="breadcrumb-item active">Edit Company</li>
+</ol>
+
+<div class="row text-center bottom-space">
+  <h3>Edit Your Company Profile</h3>
+</div>
+
+<%= render 'form' %>

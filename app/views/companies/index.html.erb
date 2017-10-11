@@ -1,0 +1,16 @@
+<% @companies.each do |company| %>
+  <div class="panel panel-default">
+    <div class="panel-body row ">
+      <div class="row"> 
+        <h2 style="padding-right:10px;"class="text-right col-xs-6"><%= "#{company.name}"+ " |" %></h2>
+        <h4 style="padding-top:18px; padding-left:0px;" class="text-left col-xs-6">
+          <%= "#{company.location.city}, " "#{company.location.state }" %>
+        </h4>
+      </div>
+      <p class="text-center top-space"><%= company.description.split[0..100].join(' ') %></p>
+      <div class="top-space"><%= link_to 'more', company_path(company.id), class: 'btn btn-info pull-right' %></div>
+    </div>
+  </div>
+<% end %>
+ 
+<%= link_to 'Add Company', new_company_path, class: 'btn btn-success pull-right' %>
