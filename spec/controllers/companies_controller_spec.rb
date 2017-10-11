@@ -46,7 +46,6 @@ describe CompaniesController do
 
   describe "POST #create" do
     it "creates new company" do
-
       expect {
         post :create,
           company: {name: "emmy dogpark inc", description: "a dogpark for all dogs"}

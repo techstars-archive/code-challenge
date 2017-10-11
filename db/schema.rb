@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20171008032444) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "categories", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
@@ -50,7 +53,9 @@ ActiveRecord::Schema.define(version: 20171008032444) do
     t.datetime "updated_at",  null: false
   end
 
-  add_index "taggings", ["category_id"], name: "index_taggings_on_category_id"
-  add_index "taggings", ["company_id"], name: "index_taggings_on_company_id"
+  add_index "taggings", ["category_id"], name: "index_taggings_on_category_id", using: :btree
+  add_index "taggings", ["company_id"], name: "index_taggings_on_company_id", using: :btree
 
+  add_foreign_key "taggings", "categories"
+  add_foreign_key "taggings", "companies"
 end
