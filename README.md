@@ -1,9 +1,9 @@
-# Techstars Engineering Fun with Code
+# Techstars Engineering: Fun with Code
 
-The Techstars Engineering team would like to congratulate you on making it to our coding challenge. This is your chance to show the team how you approach problems and give them insight into your ability to code. For the challenge, you will be required to design, develop, and style an MVC application. Feel free to use any third party libraries you see fit. Low-fi mockups have been provided, but please feel free to take your own artistic direction. You will have **one week** from the time you are granted access to this repository to submit a solution for the given requirements. Please read all the instructions carefully and email us if you have any questions. Good luck, but most of all have fun - this is your chance to demonstrate what you can do. 
+Welcome to the Techstars Engineering Code Challenge. This is your chance to show the team how you approach problems and give us insight into your abilities. For the challenge, you are required to design, develop, and style an MVC application. Feel free to use any third party libraries you see fit. Low-fi mockups have been provided, but please feel free to take your own artistic direction. You will have **48 hours** to submit a solution for the given requirements. Please read all the instructions carefully and email us if you have any questions. 
 
 ## Getting Started
-First, fork this repository into your GitHub account. Then complete each of the parts below working as you would in a professional environment. Once you have completed all the sections, please update the README to reflect how to build and run your application, as well as any architectural decisions you have made. When you believe you are ready to submit your challenge, submit a pull request into our master branch. We will see the notification and get back to you on next steps. 
+First, fork this repository into your own GitHub account. Then complete each of the parts below, working as you would in a professional environment. Once you have completed all the sections, please update the README to reflect how to build and run your application, as well as any architectural decisions you have made. When you believe you are ready to submit your challenge, submit a pull request into our master branch. We will see the notification and get back to you on next steps. 
 
 ## What we are looking for
 
@@ -81,8 +81,9 @@ Build an application that will be a directory of companies, and the people who h
 ![step 5](Step_5.png)
 
 
-### Part 6 : Stretch Challenge
-This section of the challange in not required but would give us greater insight into your abilities. 
+### Part 6 : Stretch Challenges
+This section of the challange in not required but would give us greater insight into your abilities. Pick and choose the stretch challenges as you like.
 
-1. Using the libraries and image hosting service of your choice, add the ability to upload images to a company. Then add the image into the index, show, and edit page. 
-2. Sign-up for a Heroku account and deploy your application to the web. Please provide us with deployed URL.
+A. Create a test suite for your application, writing unit and or functional tests that adequately cover the code base. TDDers will have already completed this stretch challenge.
+B. Using the libraries and image hosting service of your choice, add the ability to upload images to a company. Then add the image into the index, show, and edit page. 
+C. Sign-up for a Heroku account (or other provider) and deploy your application to the web. Please provide us with deployed URL. Bonus points for using a provider other than Heroku.
