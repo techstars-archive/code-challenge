@@ -14,6 +14,12 @@ Company.destroy_all
     full_name: Faker::Name.name,
     title: Faker::Name.title
   )
+  category1 = Category.new( name: "IoT")
+  category2 = Category.new(name: "Ruby")
+  founder1 = Founder.new(full_name: "Jane Doe", title: "CEO")
+
+  company.taggings << Tagging.new(category: category1)
+  company.founders << founder1
   company.save
 end
 
