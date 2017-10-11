@@ -26,5 +26,4 @@ test:
     database: companiesandfounders_production
     username: companiesandfounders
     url: <%= ENV['DATABASE_URL'] %>
-    password: <%= ENV['MYAPP_DATABASE_PASSWORD'
     ] %>
