@@ -18,7 +18,7 @@ class FoundersController < ApplicationController
   private
 
   def founder_params
-    params.require(:founder).permit(:full_name, :title, :company_id).merge(:company_id => @company.id)
+    params.require(:founder).permit(:full_name, :title, :company_id)
   end
 
 end

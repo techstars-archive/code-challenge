@@ -45,8 +45,7 @@ class CompaniesController < ApplicationController
 
   def company_params
     params.require(:company).permit(:name, :description, :founded_date, :tag_list,
-                   location_attributes: [:id, :city, :state, :_destroy],
-                   )
+    location_attributes: [:id, :city, :state, :_destroy])
   end
 
 end
