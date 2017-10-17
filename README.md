@@ -53,6 +53,9 @@ mobile responsive, and looks decent without much work from me. I realize I did
 not write much CSS as part of this submission, but I'm happy to answer questions
 or write some on the spot in the interview.
 
+I chose to use postgres for the database mainly because the Docker documentation
+does, making it easier to deploy.
+
 For a "quick & dirty" deployment, I'm using `docker-machine` with `docker-compose`.
 Were this a real production app, I would create a Jenkins pipeline to build the
 Docker image, push it to AWS ECR, and deploy it in one of a number of ways:
