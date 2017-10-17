@@ -35,16 +35,17 @@ When you're done, tear down the DigitalOcean environment:
 
 * Point your local `docker` CLI at a remote host:
 
-    eval $(docker-machine env <docker-machine name>)
+      eval $(docker-machine env <docker-machine name>)
 
 * Point your local `docker` CLI back at your local machine:
 
-    eval $(docker-machine env -u)
+      eval $(docker-machine env -u)
 
 ## Architecture Decisions
 
 The CRUD part of the app was fairly straightforward, following what I believe are
-Rails best practices.
+Rails best practices. I generated models, migrations, and controllers using
+`rails generate` and created the basic REST methods in my controllers.
 
 I chose to use Twitter Bootstrap because it vastly reduces the amount of boilerplate
 CSS needed. My application is more or less screenreader accessible, quite
@@ -54,18 +55,19 @@ or write some on the spot in the interview.
 
 For a "quick & dirty" deployment, I'm using `docker-machine` with `docker-compose`.
 Were this a real production app, I would create a Jenkins pipeline to build the
-Docker image, push it to AWS ECR, and deploy it in a number of ways:
+Docker image, push it to AWS ECR, and deploy it in one of a number of ways:
 
-* The Rails app could be deployed via Kubernetes (3+ pods), an autoscaling group
-in AWS ELB, or running Docker hosts directly in e.g. DigitalOcean.
+* The Rails app could be deployed via Kubernetes (3+ pods for redundancy), an
+autoscaling group in AWS ELB, or running the image in Docker hosts directly in
+e.g. DigitalOcean.
 * The database servers could be configured in a master-slave arrangement for some
 redundancy, but I would probably opt for a managed service like AWS RDS.
 
 ## Neat Features
 
-1. Tags are downcased and sorted
-
+1. Tags are downcased for storage and sorted for display
 1. The web app is fully responsive (thanks, Bootstrap)
+1. Upon creating the deployed stack, the DB is seeded with some sample data
 
 ## TODO
 
