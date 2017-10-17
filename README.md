@@ -1,5 +1,66 @@
 # TechStars Engineering: Fun with Code
 
+**Demo!**
+http://techstars.jeffastephens.com
+
+## Build/Deployment Instructions
+
+### Running Locally
+
+Make sure Docker is installed and running, then run
+
+    ./bootstrap-compose-stack.sh
+
+After initializing, the app will be available at http://localhost:3000/
+
+### Deploying to the Cloud
+
+The build scripts are set up for DigitalOcean, and you need an Access Token to
+use them. Follow steps 1-2 here: https://docs.docker.com/machine/examples/ocean/
+
+Then, run
+
+    ./create-docker-machine.sh <desiredMachineName>
+    eval $(docker-machine env <desiredMachineName>)
+    ./bootstrap-compose-stack.sh
+
+The app will be available at the IP address of your droplet (which is the last
+thing output by `create-docker-machine.sh`).
+
+When you're done, tear down the DigitalOcean environment:
+
+    ./teardown-compose-stack.sh
+
+### Helpful `docker-machine` commands
+
+* Point your local `docker` CLI at a remote host:
+
+    eval $(docker-machine env <docker-machine name>)
+
+* Point your local `docker` CLI back at your local machine:
+
+    eval $(docker-machine env -u)
+
+## Architecture Decisions
+
+The CRUD part of the app was fairly straightforward, following what I believe are
+Rails best practices.
+
+I chose to use Twitter Bootstrap because it vastly reduces the amount of boilerplate
+CSS needed. My application is more or less screenreader accessible, quite
+mobile responsive, and looks decent without much work from me. I realize I did
+not write much CSS as part of this submission, but I'm happy to answer questions
+or write some on the spot in the interview.
+
+For a "quick & dirty" deployment, I'm using `docker-machine` with `docker-compose`.
+Were this a real production app, I would create a Jenkins pipeline to build the
+Docker image, push it to AWS ECR, and deploy it in a number of ways:
+
+* The Rails app could be deployed via Kubernetes (3+ pods), an autoscaling group
+in AWS ELB, or running Docker hosts directly in e.g. DigitalOcean.
+* The database servers could be configured in a master-slave arrangement for some
+redundancy, but I would probably opt for a managed service like AWS RDS.
+
 ## Neat Features
 
 1. Tags are downcased and sorted
