@@ -1,5 +1,13 @@
-<h1>Update Company Listing</h1>
+<ol class="breadcrumb">
+  <li>
+    <%= link_to 'Company Listing', companies_path %>
+  </li>
+  <li>
+    <%= link_to @company.name, company_path(@company) %>
+  </li>
+  <li class="active">
+    Edit
+  </li>
+</ol>
 
 <%= render 'form' %>
-
-<%= link_to 'All Companies', companies_path %>
