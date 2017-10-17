@@ -1,0 +1,33 @@
+<%= form_with model: @company, local: true do |form| %>
+  <% if @company.errors.any? %>
+    <div id="errors">
+      <h2>Whoops!</h2>
+      <ul>
+        <% @company.errors.full_messages.each do |error| %>
+          <li><%= error %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <%= form.label :location %>
+    <%= form.text_field :location %>
+  </p>
+  <p>
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </p>
+  <p>
+    <%= form.label :date_founded %>
+    <%= form.text_field :date_founded %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

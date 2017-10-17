@@ -1,0 +1,22 @@
+<%= link_to 'All Companies', companies_path %>
+
+<h1>Company Profile: <%= @company.name %></h1>
+
+<p><%= link_to 'Edit Company', edit_company_path(@company) %></p>
+<p><%= link_to 'Delete Company', company_path(@company), method: :delete, data: { confirm: "Really delete '#{@company.name}'?" } %></p>
+
+<% if @company.date_founded.length > 0 %>
+  <p>
+    <b>Founded:</b> <%= @company.date_founded %>
+  </p>
+<% end %>
+
+
+<p>
+  <b>Location:</b> <%= @company.location %>
+</p>
+
+<p>
+  <b>Description:</b><br>
+</p>
+<%= @company.description %>
