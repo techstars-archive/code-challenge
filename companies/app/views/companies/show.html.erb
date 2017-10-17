@@ -1,0 +1,53 @@
+<ol class="breadcrumb">
+  <li>
+    <%= link_to 'Company Listing', companies_path %>
+  </li>
+  <li class="active">
+    <%= @company.name %>
+  </li>
+</ol>
+
+<div class="row">
+  <div class="col-md-7">
+    <h1><%= @company.name %> <small><%= @company.location %></small></h1>
+
+    <p>
+      <%= link_to 'Edit', edit_company_path(@company), class: "btn btn-default" %>
+      <%= link_to 'Delete', company_path(@company), class: "btn btn-danger", method: :delete, data: { confirm: "Really delete '#{@company.name}'?" } %>
+    </p>
+
+    <br>
+
+    <% if @company.date_founded && @company.date_founded.length > 0 %>
+      <p>
+        <b>Founded:</b> <%= @company.date_founded %>
+      </p>
+    <% end %>
+
+    <div class="company-description">
+      <%= simple_format(@company.description) %>
+    </div>
+  </div>
+  <div class="col-md-2 col-md-offset-1">
+    <h3>Founders</h3>
+    <%= render @company.founders %>
+
+    <% if @company.founders.length < 1 %>
+      <p class="text-muted">
+        No founders have been listed yet.
+      </p>
+    <% end %>
+
+    <%= render 'founders/form' %>
+
+    <br><br>
+
+    <h3>Tags</h3>
+    <% if @company.tags.length > 0 %>
+      <%= @company.tags.map(&:text).sort.join(", ") %>
+      <br><br>
+    <% end %>
+
+    <%= render 'tags/form' %>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<h4 class="founder-entry">
+  <button class="pull-right btn btn-danger btn-sm delete-founder">
+    <%= link_to ' ', [founder.company, founder], class: "glyphicon glyphicon-remove", method: :delete, data: { confirm: "Really delete '#{founder.full_name}'?" } %>
+  </button>
+
+  <%= founder.full_name %>
+  <br>
+  <small><%= founder.title %></small>
+</h4>

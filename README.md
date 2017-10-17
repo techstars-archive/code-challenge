@@ -1,89 +1,97 @@
-# Techstars Engineering: Fun with Code
+# TechStars Engineering: Fun with Code
 
-Welcome to the Techstars Engineering Code Challenge. This is your chance to show the team how you approach problems and give us insight into your abilities. For the challenge, you are required to design, develop, and style an MVC application. Feel free to use any third party libraries you see fit. Low-fi mockups have been provided, but please feel free to take your own artistic direction. You will have **48 hours** to submit a solution for the given requirements. Please read all the instructions carefully and email us if you have any questions. 
+**Demo!**
+http://techstars.jeffastephens.com
 
-## Getting Started
-First, fork this repository into your own GitHub account. Then complete each of the parts below, working as you would in a professional environment. Once you have completed all the sections, please update the README to reflect how to build and run your application, as well as any architectural decisions you have made. When you believe you are ready to submit your challenge, submit a pull request into our master branch. We will see the notification and get back to you on next steps. 
+## Build/Deployment Instructions
 
-## What we are looking for
+### Running Locally
 
-* Ability to set up an MVC applicatoin (Strongly Recommend Rails).
-* Ability to set up a Relational Database
-* Understanding of the HTTP protocol and how it works with Rails' "RESTful" conventions
-* Understanding the basics of CRUD
-  * Create
-  * Read
-  * Update
-  * Delete
-* Ability to layout and design an HTML page with CSS
-* Ability to develop automated tests for your application
-* Ability to interpret requirements
+Make sure Docker is installed and running, then run
 
+    ./bootstrap-compose-stack.sh
 
-## The Challenge
+After initializing, the app will be available at http://localhost:3000/
 
-### Intro
+### Deploying to the Cloud
 
-Build an application that will be a directory of companies, and the people who have founded them. The main page should be a list of all the companies with some high-level information (Name, Short Description, City, State). When the user click on a company, show its details. Included in those details will be the founding members of company, a long description, and a collection of categories the company belongs to.
+The build scripts are set up for DigitalOcean, and you need an Access Token to
+use them. Follow steps 1-2 here: https://docs.docker.com/machine/examples/ocean/
 
-### Part 1 : Companies Index
+Then, run
 
-1. Create the basic layout for the page
-2. Create a list view of all companies
-  * Company Name
-  * Company Location
-  * Short Description
-3. Add ability to create a new company
-<br />
+    ./create-docker-machine.sh <desiredMachineName>
+    eval $(docker-machine env <desiredMachineName>)
+    ./bootstrap-compose-stack.sh
 
-![step 1](Step_1.png)
+The app will be available at the IP address of your droplet (which is the last
+thing output by `create-docker-machine.sh`).
 
-### Part 2 : Companies Create
+When you're done, tear down the DigitalOcean environment:
 
-1. Implement form to create a new company
-2. Fields
-    * Company Name __required__
-    * Company Location (City, State) __required__
-    * Company Description __required__
-    * Founded Date
-<br />
+    ./teardown-compose-stack.sh
 
-![step 2](Step_2.png)
+### Helpful `docker-machine` commands
 
-### Part 3 : Company Details
+* Point your local `docker` CLI at a remote host:
 
-1. Shows all of the company's information
-2. Ability to update company
-3. Ability to delete company
-<br />
+      eval $(docker-machine env <docker-machine name>)
 
-![step 3](Step_3.png)
+* Point your local `docker` CLI back at your local machine:
 
-### Part 4 : Founders
+      eval $(docker-machine env -u)
 
-1. In the Company details add the ability to add a Founder to a Company.
-2. Each Founder can only belong to a single company.
-3. Founder  Fields
-    * Founder Full Name
-    * Founder Title
-4. Founders added should display in the company detail page.
-<br />
+## Architecture Decisions
 
-![step 4](Step_4.png)
+The CRUD part of the app was fairly straightforward, following what I believe are
+Rails best practices. I generated models, migrations, and controllers using
+`rails generate` and created the basic REST methods in my controllers.
 
-### Part 5 : Tags
+I chose to use Twitter Bootstrap because it vastly reduces the amount of boilerplate
+CSS needed. My application is more or less screenreader accessible, quite
+mobile responsive, and looks decent without much work from me. I realize I did
+not write much CSS as part of this submission, but I'm happy to answer questions
+or write some on the spot in the interview.
 
-1. In the Company details add the ability to tag a company with categories. 
-2. Each category can belong to a number of different companies.
-3. Tags added should appear in the company detail page.
-<br />
+I chose to use postgres for the database mainly because the Docker documentation
+does, making it easier to deploy.
 
-![step 5](Step_5.png)
+For a "quick & dirty" deployment, I'm using `docker-machine` with `docker-compose`.
+Were this a real production app, I would create a Jenkins pipeline to build the
+Docker image, push it to AWS ECR, and deploy it in one of a number of ways:
 
+* The Rails app could be deployed via Kubernetes (3+ pods for redundancy), an
+autoscaling group in AWS ELB, or running the image in Docker hosts directly in
+e.g. DigitalOcean.
+* The database servers could be configured in a master-slave arrangement for some
+redundancy, but I would probably opt for a managed service like AWS RDS.
 
-### Part 6 : Stretch Challenges
-This section of the challange in not required but would give us greater insight into your abilities. Pick and choose the stretch challenges as you like.
+## Neat Features
 
-A. Create a test suite for your application, writing unit and or functional tests that adequately cover the code base. TDDers will have already completed this stretch challenge.
-B. Using the libraries and image hosting service of your choice, add the ability to upload images to a company. Then add the image into the index, show, and edit page. 
-C. Sign-up for a Heroku account (or other provider) and deploy your application to the web. Please provide us with deployed URL. Bonus points for using a provider other than Heroku.
+1. The index page shows the first two paragraphs of the description (based on
+  newline characters), whereas the company detail page shows the whole thing.
+  It would be nice to use a community-created gem to do this more elegantly.
+1. Tags are downcased for storage and sorted for display
+1. The web app is fully responsive (thanks, Bootstrap)
+1. Upon creating the deployed stack, the DB is seeded with some sample data
+
+## TODO
+
+Here are a few things I deferred due to time constraints/because this is a
+prototype...
+
+1. Add error messages for invalid Founder submissions. Presence and uniqueness
+are validated server-side, but no client error is shown.
+
+1. The button for deleting Founders is annoying because only a ' ' character
+inside is a link. Fix this either with some Javascript or by wrapping the link
+around the Glyphicon (the link is generated by Rails).
+
+1. Once you delete a Founder, you cannot recreate one with the same name because
+of the uniqueness check. It might be that ActiveRecord is flipping a bit to
+delete rather than running a `DELETE` query, or it might be something else.
+
+1. Tags are not stored optimally. They should be created with a many-to-many
+relationship, most likely with an intermediate DB table associating a
+`company_id` to a `tag_id`. Due to time constraints, I just made a one-to-many
+association between a Company and its Tags.
