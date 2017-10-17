@@ -68,6 +68,9 @@ redundancy, but I would probably opt for a managed service like AWS RDS.
 
 ## Neat Features
 
+1. The index page shows the first two paragraphs of the description (based on
+  newline characters), whereas the company detail page shows the whole thing.
+  It would be nice to use a community-created gem to do this more elegantly.
 1. Tags are downcased for storage and sorted for display
 1. The web app is fully responsive (thanks, Bootstrap)
 1. Upon creating the deployed stack, the DB is seeded with some sample data
