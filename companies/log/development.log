@@ -5772,3 +5772,914 @@ Processing by CompaniesController#show as HTML
 Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.2ms)
 
 
+Started POST "/companies/11/founders" for 127.0.0.1 at 2017-10-16 23:07:13 -0600
+Processing by FoundersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6BqtMklzAmLDdnr/6J5bCKAUNQywKobjBTIKxBZjTwJIiY4v/mZvN/7fmznWHfa4NKPmP8k5ns0Ef/JMK0pHGg==", "founder"=>{"full_name"=>"", "title"=>""}, "commit"=>"Add Founder", "company_id"=>"11"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/companies/11
+Completed 302 Found in 22ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/companies/11" for 127.0.0.1 at 2017-10-16 23:07:13 -0600
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering companies/show.html.erb within layouts/application
+  [1m[36mFounder Load (0.2ms)[0m  [1m[34mSELECT "founders".* FROM "founders" WHERE "founders"."company_id" = ?[0m  [["company_id", 11]]
+  Rendered collection of founders/_founder.html.erb [1 times] (0.8ms)
+  Rendered founders/_form.html.erb (2.2ms)
+  Rendered companies/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 26ms (Views: 23.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/companies/11/founders" for 127.0.0.1 at 2017-10-16 23:07:15 -0600
+Processing by FoundersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pKJhLiZSR6Mky1kU1s1HacXyOPNEHw7yYX6InjXm/EwEMUIzkUcq9hliuNLoTurZUUXrwD0MFtxgM3AWCM/0VA==", "founder"=>{"full_name"=>"asdf", "title"=>""}, "commit"=>"Add Founder", "company_id"=>"11"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/companies/11
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/companies/11" for 127.0.0.1 at 2017-10-16 23:07:15 -0600
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering companies/show.html.erb within layouts/application
+  [1m[36mFounder Load (0.1ms)[0m  [1m[34mSELECT "founders".* FROM "founders" WHERE "founders"."company_id" = ?[0m  [["company_id", 11]]
+  Rendered collection of founders/_founder.html.erb [1 times] (0.5ms)
+  Rendered founders/_form.html.erb (1.7ms)
+  Rendered companies/show.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/companies/11/founders" for 127.0.0.1 at 2017-10-16 23:08:29 -0600
+  
+SyntaxError (/Users/jeffstephens/workspace/techstars/code-challenge/companies/app/controllers/founders_controller.rb:22: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/founders_controller.rb:22: syntax error, unexpected end-of-input, expecting keyword_end
+Started POST "/companies/11/founders" for 127.0.0.1 at 2017-10-16 23:08:40 -0600
+Processing by FoundersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mIcfcLNszD5Vq1fINwoXyXafmBkebSkRll9yFzBjSYI4FDxtBHmha2gCtg4Jibp54ihLKmd+MT+XEoqfDUpBmg==", "founder"=>{"full_name"=>"sadf", "title"=>""}, "commit"=>"Add Founder", "company_id"=>"11"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/companies/11
+Completed 302 Found in 19ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/companies/11" for 127.0.0.1 at 2017-10-16 23:08:41 -0600
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering companies/show.html.erb within layouts/application
+  [1m[36mFounder Load (0.1ms)[0m  [1m[34mSELECT "founders".* FROM "founders" WHERE "founders"."company_id" = ?[0m  [["company_id", 11]]
+  Rendered collection of founders/_founder.html.erb [1 times] (0.7ms)
+  Rendered founders/_form.html.erb (4.0ms)
+  Rendered companies/show.html.erb within layouts/application (9.4ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    23:   <% end %>
+    24: </div>
+    25: 
+    26: <% if @founder.errors.any? %>
+    27:   <div id="errors">
+    28:     <h2>Whoops!</h2>
+    29:     <ul>
+  
+app/views/founders/_form.html.erb:26:in `_app_views_founders__form_html_erb__4366300792224101113_70120238680800'
+app/views/companies/show.html.erb:44:in `_app_views_companies_show_html_erb___12821771041999959_70120238864060'
+Started GET "/companies/11" for 127.0.0.1 at 2017-10-16 23:09:08 -0600
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering companies/show.html.erb within layouts/application
+  [1m[36mFounder Load (0.2ms)[0m  [1m[34mSELECT "founders".* FROM "founders" WHERE "founders"."company_id" = ?[0m  [["company_id", 11]]
+  Rendered collection of founders/_founder.html.erb [1 times] (0.8ms)
+  Rendered founders/_form.html.erb (1.8ms)
+  Rendered companies/show.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 42ms (Views: 24.2ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/companies/11/founders" for 127.0.0.1 at 2017-10-16 23:09:11 -0600
+Processing by FoundersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1UxuSv4BpNwQrAkgK2jBtJwJW9rhTP9ept57MOvLKZ91301XSRTJiS0F6OYV62wECL6I6Zhf53Cnk4O41uIhhw==", "founder"=>{"full_name"=>"asdf", "title"=>""}, "commit"=>"Add Founder", "company_id"=>"11"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/companies/11
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/companies/11" for 127.0.0.1 at 2017-10-16 23:09:11 -0600
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering companies/show.html.erb within layouts/application
+  [1m[36mFounder Load (0.1ms)[0m  [1m[34mSELECT "founders".* FROM "founders" WHERE "founders"."company_id" = ?[0m  [["company_id", 11]]
+  Rendered collection of founders/_founder.html.erb [1 times] (0.5ms)
+  Rendered founders/_form.html.erb (1.7ms)
+  Rendered companies/show.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/companies/11" for 127.0.0.1 at 2017-10-16 23:10:45 -0600
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering companies/show.html.erb within layouts/application
+  [1m[36mFounder Load (0.1ms)[0m  [1m[34mSELECT "founders".* FROM "founders" WHERE "founders"."company_id" = ?[0m  [["company_id", 11]]
+  Rendered collection of founders/_founder.html.erb [1 times] (0.9ms)
+  Rendered founders/_form.html.erb (4.3ms)
+  Rendered companies/show.html.erb within layouts/application (18.3ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    23:   <% end %>
+    24: </div>
+    25: 
+    26: <% if @founder.errors.any? %>
+    27:   <div id="errors">
+    28:     <h2>Whoops!</h2>
+    29:     <ul>
+  
+app/views/founders/_form.html.erb:26:in `_app_views_founders__form_html_erb__4366300792224101113_70120284393800'
+app/views/companies/show.html.erb:44:in `_app_views_companies_show_html_erb___12821771041999959_70120299237760'
+Started GET "/companies/11" for 127.0.0.1 at 2017-10-16 23:10:53 -0600
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering companies/show.html.erb within layouts/application
+  [1m[36mFounder Load (0.1ms)[0m  [1m[34mSELECT "founders".* FROM "founders" WHERE "founders"."company_id" = ?[0m  [["company_id", 11]]
+  Rendered collection of founders/_founder.html.erb [1 times] (0.6ms)
+  Rendered founders/_form.html.erb (1.6ms)
+  Rendered companies/show.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 26ms (Views: 23.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/companies/11/founders" for 127.0.0.1 at 2017-10-16 23:10:57 -0600
+Processing by FoundersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Fy4SS2Peov/QywFzZ54dq3hISQtRaxcqKWDOP2sXIDC3vTFW1MvPqu1i4LVZHbAb7P+aOCh4DwQoLTa3Vj4oKA==", "founder"=>{"full_name"=>"Cliff Shaw", "title"=>"asdf!"}, "commit"=>"Add Founder", "company_id"=>"11"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFounder Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "founders" WHERE "founders"."full_name" = ? LIMIT ?[0m  [["full_name", "Cliff Shaw"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/companies/11
+Completed 302 Found in 9ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/companies/11" for 127.0.0.1 at 2017-10-16 23:10:57 -0600
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering companies/show.html.erb within layouts/application
+  [1m[36mFounder Load (0.1ms)[0m  [1m[34mSELECT "founders".* FROM "founders" WHERE "founders"."company_id" = ?[0m  [["company_id", 11]]
+  Rendered collection of founders/_founder.html.erb [1 times] (0.5ms)
+  Rendered founders/_form.html.erb (1.7ms)
+  Rendered companies/show.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/companies/11/founders/8" for 127.0.0.1 at 2017-10-16 23:14:16 -0600
+Processing by FoundersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"TJQtPqqEbp7+P0bIYVnWhLjRLTyuUYhetzO2v6zzQzfsBw4jHZEDy8OWpw5f2ns0LGb+D9dCkHC2fk43kdpLLw==", "company_id"=>"11", "id"=>"8"}
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mFounder Load (0.1ms)[0m  [1m[34mSELECT  "founders".* FROM "founders" WHERE "founders"."company_id" = ? AND "founders"."id" = ? LIMIT ?[0m  [["company_id", 11], ["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "founders" WHERE "founders"."id" = ?[0m  [["id", 8]]
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/companies/11
+Completed 302 Found in 7ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/companies/11" for 127.0.0.1 at 2017-10-16 23:14:16 -0600
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering companies/show.html.erb within layouts/application
+  [1m[36mFounder Load (0.1ms)[0m  [1m[34mSELECT "founders".* FROM "founders" WHERE "founders"."company_id" = ?[0m  [["company_id", 11]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered founders/_form.html.erb (2.0ms)
+  Rendered companies/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 25ms (Views: 22.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/companies/11" for 127.0.0.1 at 2017-10-16 23:15:14 -0600
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering companies/show.html.erb within layouts/application
+  [1m[36mFounder Load (0.1ms)[0m  [1m[34mSELECT "founders".* FROM "founders" WHERE "founders"."company_id" = ?[0m  [["company_id", 11]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered founders/_form.html.erb (1.8ms)
+  Rendered companies/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 22ms (Views: 19.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/companies/11/founders" for 127.0.0.1 at 2017-10-16 23:15:18 -0600
+Processing by FoundersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C+gqD3vYSsqdDC0jJ0mcT2FEwCz4fO7r59OZ14U3L5KrewkSzM0nn6ClzOUZyjH/9fMTH4Fv9sXmnmFfuB4nig==", "founder"=>{"full_name"=>"Cliff Shaw", "title"=>"Founder & CEO"}, "commit"=>"Add Founder", "company_id"=>"11"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFounder Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "founders" WHERE "founders"."full_name" = ? LIMIT ?[0m  [["full_name", "Cliff Shaw"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/companies/11
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/companies/11" for 127.0.0.1 at 2017-10-16 23:15:18 -0600
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering companies/show.html.erb within layouts/application
+  [1m[36mFounder Load (0.2ms)[0m  [1m[34mSELECT "founders".* FROM "founders" WHERE "founders"."company_id" = ?[0m  [["company_id", 11]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered founders/_form.html.erb (1.8ms)
+  Rendered companies/show.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 29ms (Views: 27.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/companies/11" for 127.0.0.1 at 2017-10-16 23:15:19 -0600
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering companies/show.html.erb within layouts/application
+  [1m[36mFounder Load (0.1ms)[0m  [1m[34mSELECT "founders".* FROM "founders" WHERE "founders"."company_id" = ?[0m  [["company_id", 11]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered founders/_form.html.erb (1.8ms)
+  Rendered companies/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "companies"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "companies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "location" varchar, "description" text, "date_founded" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "founders"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "founders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "full_name" varchar, "title" varchar, "company_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_founders_on_company_id" ON "founders" ("company_id")[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20171017041457)[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20171017022125);
+
+[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-10-17 05:17:24.804741"], ["updated_at", "2017-10-17 05:17:24.804741"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "companies"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "companies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "location" varchar, "description" text, "date_founded" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "founders"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "founders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "full_name" varchar, "title" varchar, "company_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE  INDEX "index_founders_on_company_id" ON "founders" ("company_id")[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20171017041457)[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20171017022125);
+
+[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-10-17 05:17:24.821232"], ["updated_at", "2017-10-17 05:17:24.821232"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "companies" ("name", "location", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Mocavo"], ["location", "Boulder, CO"], ["description", "Founded by Cliff Shaw, Mocavo launched on March 16, 2011.[6] On June 14, 2011, Family Tree Magazine named Mocavo as one of the best 101 genealogy websites of 2011.[7]\n\nMocavo participated in the Boulder Techstars program in the Summer of 2011.[8]\n\nIn September 2011, Mocavo raised a 1 million dollar round from \"David Cohen, Dave McClure, David Bonderman, Walt Winshall, David Calone, Dave Carlson, Troy Henikoff, and other angels\".[9] Mocavo introduced Mocavo.co.uk on November 29, 2011[10] and launched its first paid service named Mocavo Plus in December 2011.[11] In May 2012, Mocavo received a $4.1 million Series A round of funding from the Foundry Group.[12]\n\nAfter gaining additional funding, Ryan Hunter and Michael J. Leclerc joined Mocavo as Chief Operating Officer and Chief Genealogist respectively.[13] In September 2012, Mocavo acquired ReadyMicro, a Utah-based company that specialized in digitization and preservation services.[14]\n\nIn November 2012, Mocavo launched a free Yearbook collection[15] and rolled out free scanning services for all Mocavo members.[16] In January 2013 Mocavo joined FHISO as one of the founding members,[17] to help maintain, develop and evolve the GEDCOM standards sought by the genealogy community; it also partnered with FreeBMD to add 300 million English and Welsh records to the Mocavo index.[18] On October 11, 2013, Mocavo announced its Free Forever Movement.[19]\n\nIn June 2014 it was announced that UK based genealogy provider Findmypast had acquired the company for an undisclosed sum.[20]"], ["created_at", "2017-10-17 05:17:24.838020"], ["updated_at", "2017-10-17 05:17:24.838020"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "companies" ("name", "location", "description", "date_founded", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Google"], ["location", "Mountain View, CA"], ["description", "Google Inc. is an American multinational technology company that specializes in Internet-related services and products. These include online advertising technologies, search, cloud computing, software, and hardware.\n\nGoogle was founded in 1998 by Larry Page and Sergey Brin while they were Ph.D. students at Stanford University, in California. Together, they own about 14 percent of its shares, and control 56 percent of the stockholder voting power through supervoting stock.\n\nThey incorporated Google as a privately held company on September 4, 1998. An initial public offering (IPO) took place on August 19, 2004, and Google moved to its new headquarters in Mountain View, California, nicknamed the Googleplex.\n\nIn August 2015, Google announced plans to reorganize its various interests as a conglomerate called Alphabet Inc. Google, Alphabet's leading subsidiary, will continue to be the umbrella company for Alphabet's Internet interests.\n\nUpon completion of the restructure, Sundar Pichai was appointed CEO of Google; he replaced Larry Page, who became CEO of Alphabet."], ["date_founded", "9/4/1998"], ["created_at", "2017-10-17 05:17:24.840221"], ["updated_at", "2017-10-17 05:17:24.840221"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/companies/11" for 127.0.0.1 at 2017-10-16 23:18:07 -0600
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering companies/show.html.erb within layouts/application
+  [1m[36mFounder Load (0.1ms)[0m  [1m[34mSELECT "founders".* FROM "founders" WHERE "founders"."company_id" = ?[0m  [["company_id", 11]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered founders/_form.html.erb (1.7ms)
+  Rendered companies/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 23ms (Views: 20.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/companies/11/founders" for 127.0.0.1 at 2017-10-16 23:18:15 -0600
+Processing by FoundersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i9xGXmUswoS8IVfpPzdR+y1fO2pG1RuOjgSCxipmnL8rT2VD0jmv0YGIti8BtPxLuejoWT/GA6CPSXpOF0+Upw==", "founder"=>{"full_name"=>"Cliff Shaw", "title"=>"Founder & CEO"}, "commit"=>"Add Founder", "company_id"=>"11"}
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFounder Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "founders" WHERE "founders"."full_name" = ? LIMIT ?[0m  [["full_name", "Cliff Shaw"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/companies/11
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/companies/11" for 127.0.0.1 at 2017-10-16 23:18:15 -0600
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering companies/show.html.erb within layouts/application
+  [1m[36mFounder Load (0.1ms)[0m  [1m[34mSELECT "founders".* FROM "founders" WHERE "founders"."company_id" = ?[0m  [["company_id", 11]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered founders/_form.html.erb (1.9ms)
+  Rendered companies/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/companies/11" for 127.0.0.1 at 2017-10-16 23:18:16 -0600
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering companies/show.html.erb within layouts/application
+  [1m[36mFounder Load (0.1ms)[0m  [1m[34mSELECT "founders".* FROM "founders" WHERE "founders"."company_id" = ?[0m  [["company_id", 11]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered founders/_form.html.erb (1.7ms)
+  Rendered companies/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/companies" for 127.0.0.1 at 2017-10-16 23:18:18 -0600
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.erb within layouts/application
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  Rendered companies/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 19ms (Views: 16.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/companies" for 127.0.0.1 at 2017-10-16 23:18:18 -0600
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.erb within layouts/application
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  Rendered companies/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCompanies (20171017022125)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "companies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "location" varchar, "description" text, "date_founded" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171017022125"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateFounders (20171017041457)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "founders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "full_name" varchar, "title" varchar, "company_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_c929db2d48"
+FOREIGN KEY ("company_id")
+  REFERENCES "companies" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_founders_on_company_id" ON "founders" ("company_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171017041457"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-10-17 05:18:41.049881"], ["updated_at", "2017-10-17 05:18:41.049881"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_founders_on_company_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_founders_on_company_id' AND type='index'
+[0m
+Started GET "/companies" for 127.0.0.1 at 2017-10-16 23:18:47 -0600
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.erb within layouts/application
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  Rendered companies/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 30ms (Views: 26.3ms | ActiveRecord: 0.5ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "companies" ("name", "location", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Mocavo"], ["location", "Boulder, CO"], ["description", "Founded by Cliff Shaw, Mocavo launched on March 16, 2011.[6] On June 14, 2011, Family Tree Magazine named Mocavo as one of the best 101 genealogy websites of 2011.[7]\n\nMocavo participated in the Boulder Techstars program in the Summer of 2011.[8]\n\nIn September 2011, Mocavo raised a 1 million dollar round from \"David Cohen, Dave McClure, David Bonderman, Walt Winshall, David Calone, Dave Carlson, Troy Henikoff, and other angels\".[9] Mocavo introduced Mocavo.co.uk on November 29, 2011[10] and launched its first paid service named Mocavo Plus in December 2011.[11] In May 2012, Mocavo received a $4.1 million Series A round of funding from the Foundry Group.[12]\n\nAfter gaining additional funding, Ryan Hunter and Michael J. Leclerc joined Mocavo as Chief Operating Officer and Chief Genealogist respectively.[13] In September 2012, Mocavo acquired ReadyMicro, a Utah-based company that specialized in digitization and preservation services.[14]\n\nIn November 2012, Mocavo launched a free Yearbook collection[15] and rolled out free scanning services for all Mocavo members.[16] In January 2013 Mocavo joined FHISO as one of the founding members,[17] to help maintain, develop and evolve the GEDCOM standards sought by the genealogy community; it also partnered with FreeBMD to add 300 million English and Welsh records to the Mocavo index.[18] On October 11, 2013, Mocavo announced its Free Forever Movement.[19]\n\nIn June 2014 it was announced that UK based genealogy provider Findmypast had acquired the company for an undisclosed sum.[20]"], ["created_at", "2017-10-17 05:18:52.417216"], ["updated_at", "2017-10-17 05:18:52.417216"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "companies" ("name", "location", "description", "date_founded", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Google"], ["location", "Mountain View, CA"], ["description", "Google Inc. is an American multinational technology company that specializes in Internet-related services and products. These include online advertising technologies, search, cloud computing, software, and hardware.\n\nGoogle was founded in 1998 by Larry Page and Sergey Brin while they were Ph.D. students at Stanford University, in California. Together, they own about 14 percent of its shares, and control 56 percent of the stockholder voting power through supervoting stock.\n\nThey incorporated Google as a privately held company on September 4, 1998. An initial public offering (IPO) took place on August 19, 2004, and Google moved to its new headquarters in Mountain View, California, nicknamed the Googleplex.\n\nIn August 2015, Google announced plans to reorganize its various interests as a conglomerate called Alphabet Inc. Google, Alphabet's leading subsidiary, will continue to be the umbrella company for Alphabet's Internet interests.\n\nUpon completion of the restructure, Sundar Pichai was appointed CEO of Google; he replaced Larry Page, who became CEO of Alphabet."], ["date_founded", "9/4/1998"], ["created_at", "2017-10-17 05:18:52.421309"], ["updated_at", "2017-10-17 05:18:52.421309"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/companies" for 127.0.0.1 at 2017-10-16 23:18:52 -0600
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.erb within layouts/application
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  Rendered companies/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/companies/1" for 127.0.0.1 at 2017-10-16 23:18:54 -0600
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering companies/show.html.erb within layouts/application
+  [1m[36mFounder Load (0.1ms)[0m  [1m[34mSELECT "founders".* FROM "founders" WHERE "founders"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered founders/_form.html.erb (6.6ms)
+  Rendered companies/show.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 31ms (Views: 27.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/companies/1/founders" for 127.0.0.1 at 2017-10-16 23:18:58 -0600
+Processing by FoundersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HzH/cVZa4SefVzheDyhyHxj4iwdmj3RF/Pu8KoSTT/ea4nWBcWJOnQRdU3tvBso7nxSTxccmaksIXDQ+YOFnnQ==", "founder"=>{"full_name"=>"Cliff Shaw", "title"=>"Founder & CEO"}, "commit"=>"Add Founder", "company_id"=>"1"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFounder Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "founders" WHERE "founders"."full_name" = ? LIMIT ?[0m  [["full_name", "Cliff Shaw"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "founders" ("full_name", "title", "company_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["full_name", "Cliff Shaw"], ["title", "Founder & CEO"], ["company_id", 1], ["created_at", "2017-10-17 05:18:58.472887"], ["updated_at", "2017-10-17 05:18:58.472887"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/companies/1
+Completed 302 Found in 8ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/companies/1" for 127.0.0.1 at 2017-10-16 23:18:58 -0600
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering companies/show.html.erb within layouts/application
+  [1m[36mFounder Load (0.1ms)[0m  [1m[34mSELECT "founders".* FROM "founders" WHERE "founders"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered collection of founders/_founder.html.erb [1 times] (0.7ms)
+  Rendered founders/_form.html.erb (2.1ms)
+  Rendered companies/show.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 26ms (Views: 23.3ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTags (20171017052331)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "tags" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "text" text, "company_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_cd310945e7"
+FOREIGN KEY ("company_id")
+  REFERENCES "companies" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_tags_on_company_id" ON "tags" ("company_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171017052331"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_founders_on_company_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_founders_on_company_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tags_on_company_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tags_on_company_id' AND type='index'
+[0m
+Started GET "/companies/1" for 127.0.0.1 at 2017-10-16 23:30:48 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering companies/show.html.erb within layouts/application
+  [1m[36mFounder Load (0.1ms)[0m  [1m[34mSELECT "founders".* FROM "founders" WHERE "founders"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered collection of founders/_founder.html.erb [1 times] (1.0ms)
+  Rendered founders/_form.html.erb (1.9ms)
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered tags/_form.html.erb (129.7ms)
+  Rendered companies/show.html.erb within layouts/application (149.9ms)
+Completed 500 Internal Server Error in 166ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `company_tags_path' for #<#<Class:0x00007f8c46e90960>:0x00007f8c46e836c0>
+Did you mean?  company_path
+               companies_path):
+    1: <%= form_with(model: [ @company, @company.tags.build ], local: true) do |form| %>
+    2:   <div class="form-group">
+    3:     <%= form.text_field :text, class: 'form-control', placeholder: 'Add tag...' %>
+    4:   </div>
+  
+app/views/tags/_form.html.erb:1:in `_app_views_tags__form_html_erb__4194617670317839173_70120282576220'
+app/views/companies/show.html.erb:50:in `_app_views_companies_show_html_erb___12821771041999959_70120230917980'
+Started GET "/companies/1" for 127.0.0.1 at 2017-10-16 23:31:09 -0600
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering companies/show.html.erb within layouts/application
+  [1m[36mFounder Load (0.1ms)[0m  [1m[34mSELECT "founders".* FROM "founders" WHERE "founders"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered collection of founders/_founder.html.erb [1 times] (1.3ms)
+  Rendered founders/_form.html.erb (2.0ms)
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered tags/_form.html.erb (8.3ms)
+  Rendered companies/show.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 98ms (Views: 85.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/companies/1" for 127.0.0.1 at 2017-10-16 23:31:53 -0600
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering companies/show.html.erb within layouts/application
+  [1m[36mFounder Load (0.1ms)[0m  [1m[34mSELECT "founders".* FROM "founders" WHERE "founders"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered collection of founders/_founder.html.erb [1 times] (0.4ms)
+  Rendered founders/_form.html.erb (1.8ms)
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered tags/_form.html.erb (1.4ms)
+  Rendered companies/show.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 28ms (Views: 25.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/companies/1" for 127.0.0.1 at 2017-10-16 23:32:14 -0600
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering companies/show.html.erb within layouts/application
+  [1m[36mFounder Load (0.1ms)[0m  [1m[34mSELECT "founders".* FROM "founders" WHERE "founders"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered collection of founders/_founder.html.erb [1 times] (0.5ms)
+  Rendered founders/_form.html.erb (1.7ms)
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered tags/_form.html.erb (1.1ms)
+  Rendered companies/show.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 28ms (Views: 25.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/companies/1" for 127.0.0.1 at 2017-10-16 23:32:45 -0600
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering companies/show.html.erb within layouts/application
+  [1m[36mFounder Load (0.1ms)[0m  [1m[34mSELECT "founders".* FROM "founders" WHERE "founders"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered collection of founders/_founder.html.erb [1 times] (0.5ms)
+  Rendered founders/_form.html.erb (1.8ms)
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered tags/_form.html.erb (1.4ms)
+  Rendered companies/show.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 28ms (Views: 25.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/companies/1" for 127.0.0.1 at 2017-10-16 23:32:49 -0600
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering companies/show.html.erb within layouts/application
+  [1m[36mFounder Load (0.1ms)[0m  [1m[34mSELECT "founders".* FROM "founders" WHERE "founders"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered collection of founders/_founder.html.erb [1 times] (0.6ms)
+  Rendered founders/_form.html.erb (1.8ms)
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered tags/_form.html.erb (1.1ms)
+  Rendered companies/show.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 29ms (Views: 26.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/companies/1/tags" for 127.0.0.1 at 2017-10-16 23:32:54 -0600
+Processing by TagsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CLDNYn7sn0dw7e4aNueIjLRFzunz+pfKDe6upJMz7TWoI+5/yfnyEk1ED9wIZCU8IPId2orpj+QMo1YsrhrlLQ==", "tag"=>{"text"=>"genealogy"}, "commit"=>"Add Tag", "company_id"=>"1"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  
+app/controllers/tags_controller.rb:6:in `create'
+Started POST "/companies/1/tags" for 127.0.0.1 at 2017-10-16 23:34:06 -0600
+  
+ActionController::RoutingError (undefined method `before_create' for TagsController:Class
+Did you mean?  before_action):
+  
+app/controllers/tags_controller.rb:2:in `<class:TagsController>'
+app/controllers/tags_controller.rb:1:in `<top (required)>'
+Started POST "/companies/1/tags" for 127.0.0.1 at 2017-10-16 23:34:41 -0600
+Processing by TagsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CLDNYn7sn0dw7e4aNueIjLRFzunz+pfKDe6upJMz7TWoI+5/yfnyEk1ED9wIZCU8IPId2orpj+QMo1YsrhrlLQ==", "tag"=>{"text"=>"genealogy"}, "commit"=>"Add Tag", "company_id"=>"1"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `downcase!' for nil:NilClass):
+  
+app/controllers/tags_controller.rb:5:in `create'
+Started POST "/companies/1/tags" for 127.0.0.1 at 2017-10-16 23:35:33 -0600
+Processing by TagsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CLDNYn7sn0dw7e4aNueIjLRFzunz+pfKDe6upJMz7TWoI+5/yfnyEk1ED9wIZCU8IPId2orpj+QMo1YsrhrlLQ==", "tag"=>{"text"=>"genealogy"}, "commit"=>"Add Tag", "company_id"=>"1"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "tags" ("text", "company_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "genealogy"], ["company_id", 1], ["created_at", "2017-10-17 05:35:33.479156"], ["updated_at", "2017-10-17 05:35:33.479156"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/companies/1
+Completed 302 Found in 21ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/companies/1" for 127.0.0.1 at 2017-10-16 23:35:34 -0600
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering companies/show.html.erb within layouts/application
+  [1m[36mFounder Load (0.1ms)[0m  [1m[34mSELECT "founders".* FROM "founders" WHERE "founders"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered collection of founders/_founder.html.erb [1 times] (1.2ms)
+  Rendered founders/_form.html.erb (2.3ms)
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered tags/_form.html.erb (1.7ms)
+  Rendered companies/show.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 43ms (Views: 40.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/companies/1/tags" for 127.0.0.1 at 2017-10-16 23:35:43 -0600
+Processing by TagsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OQMgvFWUEux4r7sWsY71IPKyC72+3D0ry1uPY48rpRWZkAOh4oF/uUUGWtCPDViQZgXYjsfPJQXKFnfrsgKtDQ==", "tag"=>{"text"=>"test"}, "commit"=>"Add Tag", "company_id"=>"1"}
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "tags" ("text", "company_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "test"], ["company_id", 1], ["created_at", "2017-10-17 05:35:43.074372"], ["updated_at", "2017-10-17 05:35:43.074372"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/companies/1
+Completed 302 Found in 6ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/companies/1" for 127.0.0.1 at 2017-10-16 23:35:43 -0600
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering companies/show.html.erb within layouts/application
+  [1m[36mFounder Load (0.2ms)[0m  [1m[34mSELECT "founders".* FROM "founders" WHERE "founders"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered collection of founders/_founder.html.erb [1 times] (0.6ms)
+  Rendered founders/_form.html.erb (10.2ms)
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered tags/_form.html.erb (1.5ms)
+  Rendered companies/show.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 40ms (Views: 38.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/companies/1" for 127.0.0.1 at 2017-10-16 23:36:18 -0600
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering companies/show.html.erb within layouts/application
+  [1m[36mFounder Load (0.1ms)[0m  [1m[34mSELECT "founders".* FROM "founders" WHERE "founders"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered collection of founders/_founder.html.erb [1 times] (0.5ms)
+  Rendered founders/_form.html.erb (1.7ms)
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered tags/_form.html.erb (1.1ms)
+  Rendered companies/show.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 30ms (Views: 27.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/companies/1" for 127.0.0.1 at 2017-10-16 23:36:27 -0600
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering companies/show.html.erb within layouts/application
+  [1m[36mFounder Load (0.1ms)[0m  [1m[34mSELECT "founders".* FROM "founders" WHERE "founders"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered collection of founders/_founder.html.erb [1 times] (0.7ms)
+  Rendered founders/_form.html.erb (1.6ms)
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered companies/show.html.erb within layouts/application (11.4ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `text' for #<Tag::ActiveRecord_Associations_CollectionProxy:0x00007f8c47e82198>):
+    44: 
+    45:     <h3>Tags</h3>
+    46:     <% if @company.tags.length > 0 %>
+    47:       <%= @company.tags.text.join(", ") %>
+    48:     <% end %>
+    49: 
+    50:     <%= render 'tags/form' %>
+  
+app/views/companies/show.html.erb:47:in `_app_views_companies_show_html_erb___12821771041999959_70120291831720'
+Started GET "/companies/1" for 127.0.0.1 at 2017-10-16 23:36:57 -0600
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering companies/show.html.erb within layouts/application
+  [1m[36mFounder Load (0.1ms)[0m  [1m[34mSELECT "founders".* FROM "founders" WHERE "founders"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered collection of founders/_founder.html.erb [1 times] (0.6ms)
+  Rendered founders/_form.html.erb (1.8ms)
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered tags/_form.html.erb (1.5ms)
+  Rendered companies/show.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 29ms (Views: 26.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/companies/1" for 127.0.0.1 at 2017-10-16 23:37:02 -0600
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering companies/show.html.erb within layouts/application
+  [1m[36mFounder Load (0.1ms)[0m  [1m[34mSELECT "founders".* FROM "founders" WHERE "founders"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered collection of founders/_founder.html.erb [1 times] (0.5ms)
+  Rendered founders/_form.html.erb (1.7ms)
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered tags/_form.html.erb (1.0ms)
+  Rendered companies/show.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 28ms (Views: 26.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/companies/1" for 127.0.0.1 at 2017-10-16 23:37:04 -0600
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCompany Load (0.5ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering companies/show.html.erb within layouts/application
+  [1m[36mFounder Load (0.1ms)[0m  [1m[34mSELECT "founders".* FROM "founders" WHERE "founders"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered collection of founders/_founder.html.erb [1 times] (0.4ms)
+  Rendered founders/_form.html.erb (1.7ms)
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered tags/_form.html.erb (1.0ms)
+  Rendered companies/show.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 28ms (Views: 24.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/companies/1/tags" for 127.0.0.1 at 2017-10-16 23:37:08 -0600
+Processing by TagsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cfVF1dJX2DoWlD05U+MgZZMNUPv8pNw8oVGvs+b9sXPRZmbIZUK1bys93P9tYI3VB7qDyIW3xBKgHFc729S5aw==", "tag"=>{"text"=>"startups"}, "commit"=>"Add Tag", "company_id"=>"1"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "tags" ("text", "company_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "startups"], ["company_id", 1], ["created_at", "2017-10-17 05:37:08.281238"], ["updated_at", "2017-10-17 05:37:08.281238"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/companies/1
+Completed 302 Found in 5ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/companies/1" for 127.0.0.1 at 2017-10-16 23:37:08 -0600
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering companies/show.html.erb within layouts/application
+  [1m[36mFounder Load (0.1ms)[0m  [1m[34mSELECT "founders".* FROM "founders" WHERE "founders"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered collection of founders/_founder.html.erb [1 times] (0.6ms)
+  Rendered founders/_form.html.erb (2.4ms)
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered tags/_form.html.erb (1.1ms)
+  Rendered companies/show.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 32ms (Views: 30.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/companies/1/tags" for 127.0.0.1 at 2017-10-16 23:37:10 -0600
+Processing by TagsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b0HrwUP6/mw0DsXb6hjAsH7CuWDFD9Si/rL0oeHyeBXP0sjc9O+TOQmnJB3Um20A6nVqU7wczIz//wwp3NtwDQ==", "tag"=>{"text"=>"acquired"}, "commit"=>"Add Tag", "company_id"=>"1"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "tags" ("text", "company_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "acquired"], ["company_id", 1], ["created_at", "2017-10-17 05:37:10.093641"], ["updated_at", "2017-10-17 05:37:10.093641"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/companies/1
+Completed 302 Found in 5ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/companies/1" for 127.0.0.1 at 2017-10-16 23:37:10 -0600
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering companies/show.html.erb within layouts/application
+  [1m[36mFounder Load (0.1ms)[0m  [1m[34mSELECT "founders".* FROM "founders" WHERE "founders"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered collection of founders/_founder.html.erb [1 times] (0.6ms)
+  Rendered founders/_form.html.erb (1.9ms)
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered tags/_form.html.erb (1.2ms)
+  Rendered companies/show.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 38ms (Views: 35.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/companies/1" for 127.0.0.1 at 2017-10-16 23:37:31 -0600
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering companies/show.html.erb within layouts/application
+  [1m[36mFounder Load (0.1ms)[0m  [1m[34mSELECT "founders".* FROM "founders" WHERE "founders"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered collection of founders/_founder.html.erb [1 times] (0.5ms)
+  Rendered founders/_form.html.erb (1.7ms)
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered companies/show.html.erb within layouts/application (11.4ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `sort!' for #<Tag::ActiveRecord_Associations_CollectionProxy:0x00007f8c4f86a938>
+Did you mean?  sort):
+    44: 
+    45:     <h3>Tags</h3>
+    46:     <% if @company.tags.length > 0 %>
+    47:       <%= @company.tags.sort!.map(&:text).join(", ") %>
+    48:       <br><br>
+    49:     <% end %>
+    50: 
+  
+app/views/companies/show.html.erb:47:in `_app_views_companies_show_html_erb___12821771041999959_70120303462840'
+Started GET "/companies/1" for 127.0.0.1 at 2017-10-16 23:37:34 -0600
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering companies/show.html.erb within layouts/application
+  [1m[36mFounder Load (0.1ms)[0m  [1m[34mSELECT "founders".* FROM "founders" WHERE "founders"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered collection of founders/_founder.html.erb [1 times] (0.7ms)
+  Rendered founders/_form.html.erb (1.9ms)
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered tags/_form.html.erb (1.3ms)
+  Rendered companies/show.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 31ms (Views: 28.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/companies/1" for 127.0.0.1 at 2017-10-16 23:37:35 -0600
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering companies/show.html.erb within layouts/application
+  [1m[36mFounder Load (0.1ms)[0m  [1m[34mSELECT "founders".* FROM "founders" WHERE "founders"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered collection of founders/_founder.html.erb [1 times] (0.7ms)
+  Rendered founders/_form.html.erb (1.9ms)
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered tags/_form.html.erb (1.3ms)
+  Rendered companies/show.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 36ms (Views: 32.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/companies/1" for 127.0.0.1 at 2017-10-16 23:37:40 -0600
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering companies/show.html.erb within layouts/application
+  [1m[36mFounder Load (0.1ms)[0m  [1m[34mSELECT "founders".* FROM "founders" WHERE "founders"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered collection of founders/_founder.html.erb [1 times] (0.5ms)
+  Rendered founders/_form.html.erb (2.7ms)
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered tags/_form.html.erb (1.4ms)
+  Rendered companies/show.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 30ms (Views: 27.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/companies/1/tags" for 127.0.0.1 at 2017-10-16 23:37:46 -0600
+Processing by TagsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y6dNw1O43kCG5v3F8V6h/yIKGkyvqJmlLlPu8knZ/KXDNG7e5K2zFbtPHAPP3QxPtr3Jf9a7gYsvHhZ6dPD0vQ==", "tag"=>{"text"=>"awesome"}, "commit"=>"Add Tag", "company_id"=>"1"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "tags" ("text", "company_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["text", "awesome"], ["company_id", 1], ["created_at", "2017-10-17 05:37:46.837006"], ["updated_at", "2017-10-17 05:37:46.837006"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/companies/1
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/companies/1" for 127.0.0.1 at 2017-10-16 23:37:46 -0600
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering companies/show.html.erb within layouts/application
+  [1m[36mFounder Load (0.1ms)[0m  [1m[34mSELECT "founders".* FROM "founders" WHERE "founders"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered collection of founders/_founder.html.erb [1 times] (0.6ms)
+  Rendered founders/_form.html.erb (1.9ms)
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered tags/_form.html.erb (1.2ms)
+  Rendered companies/show.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 31ms (Views: 28.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/companies" for 127.0.0.1 at 2017-10-16 23:38:00 -0600
+Processing by CompaniesController#index as HTML
+  Rendering companies/index.html.erb within layouts/application
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies"[0m
+  Rendered companies/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/companies/1" for 127.0.0.1 at 2017-10-16 23:38:01 -0600
+Processing by CompaniesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT  "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering companies/show.html.erb within layouts/application
+  [1m[36mFounder Load (0.1ms)[0m  [1m[34mSELECT "founders".* FROM "founders" WHERE "founders"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered collection of founders/_founder.html.erb [1 times] (0.6ms)
+  Rendered founders/_form.html.erb (2.5ms)
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."company_id" = ?[0m  [["company_id", 1]]
+  Rendered tags/_form.html.erb (1.4ms)
+  Rendered companies/show.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 34ms (Views: 31.4ms | ActiveRecord: 0.3ms)
+
+

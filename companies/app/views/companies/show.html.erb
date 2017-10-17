@@ -11,8 +11,6 @@
   <div class="col-md-7">
     <h1><%= @company.name %> <small><%= @company.location %></small></h1>
 
-    <!-- <a href="<%= edit_company_path(@company) %>" class="btn btn-default">Edit</a> -->
-
     <p>
       <%= link_to 'Edit', edit_company_path(@company), class: "btn btn-default" %>
       <%= link_to 'Delete', company_path(@company), class: "btn btn-danger", method: :delete, data: { confirm: "Really delete '#{@company.name}'?" } %>
@@ -32,7 +30,6 @@
   </div>
   <div class="col-md-2 col-md-offset-1">
     <h3>Founders</h3>
-    <!-- List of current founders -->
     <%= render @company.founders %>
 
     <% if @company.founders.length < 1 %>
@@ -42,5 +39,15 @@
     <% end %>
 
     <%= render 'founders/form' %>
+
+    <br><br>
+
+    <h3>Tags</h3>
+    <% if @company.tags.length > 0 %>
+      <%= @company.tags.map(&:text).sort.join(", ") %>
+      <br><br>
+    <% end %>
+
+    <%= render 'tags/form' %>
   </div>
 </div>
