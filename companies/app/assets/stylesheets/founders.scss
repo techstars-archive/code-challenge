@@ -1,0 +1,28 @@
+// Place all the styles related to the Founders controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$white: #FFF;
+
+.embedded-form form {
+  margin-top: 1em;
+  padding: 1em 0.8em 0.2em;
+  background: #EDEDED;
+}
+
+.founder-entry {
+  margin: 1em 0;
+}
+
+.delete-founder {
+  font-size: 0.5em;
+
+  a:link, a:visited {
+    color: $white;
+    text-decoration: none;
+  }
+
+  a:hover, a:active, a:focus {
+    text-decoration: none;
+  }
+}

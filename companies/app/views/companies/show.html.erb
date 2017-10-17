@@ -8,25 +8,39 @@
 </ol>
 
 <div class="row">
-  <div class="col-md-8 col-md-offset-2">
-  <h1><%= @company.name %> <small><%= @company.location %></small></h1>
+  <div class="col-md-7">
+    <h1><%= @company.name %> <small><%= @company.location %></small></h1>
 
-  <!-- <a href="<%= edit_company_path(@company) %>" class="btn btn-default">Edit</a> -->
+    <!-- <a href="<%= edit_company_path(@company) %>" class="btn btn-default">Edit</a> -->
 
-  <p>
-    <%= link_to 'Edit', edit_company_path(@company), class: "btn btn-default" %>
-    <%= link_to 'Delete', company_path(@company), class: "btn btn-danger", method: :delete, data: { confirm: "Really delete '#{@company.name}'?" } %>
-  </p>
-
-  <br>
-
-  <% if @company.date_founded && @company.date_founded.length > 0 %>
     <p>
-      <b>Founded:</b> <%= @company.date_founded %>
+      <%= link_to 'Edit', edit_company_path(@company), class: "btn btn-default" %>
+      <%= link_to 'Delete', company_path(@company), class: "btn btn-danger", method: :delete, data: { confirm: "Really delete '#{@company.name}'?" } %>
     </p>
-  <% end %>
 
-  <div class="company-description">
-    <%= simple_format(@company.description) %>
+    <br>
+
+    <% if @company.date_founded && @company.date_founded.length > 0 %>
+      <p>
+        <b>Founded:</b> <%= @company.date_founded %>
+      </p>
+    <% end %>
+
+    <div class="company-description">
+      <%= simple_format(@company.description) %>
+    </div>
+  </div>
+  <div class="col-md-2 col-md-offset-1">
+    <h3>Founders</h3>
+    <!-- List of current founders -->
+    <%= render @company.founders %>
+
+    <% if @company.founders.length < 1 %>
+      <p class="text-muted">
+        No founders have been listed yet.
+      </p>
+    <% end %>
+
+    <%= render 'founders/form' %>
   </div>
 </div>
