@@ -1,6 +1,7 @@
 class FoundersController < ApplicationController
   def create
     @company = Company.find(params[:company_id])
+
     @founder = @company.founders.create(founder_params)
     redirect_to company_path(@company)
   end
