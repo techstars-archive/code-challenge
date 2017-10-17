@@ -16,6 +16,20 @@
     <p>
       <br>
       <a href="<%= company_path(company) %>" class="btn btn-primary">Read More &raquo;</a>
+      <br><br>
+    </p>
+  </div>
+</div>
+<% end %>
+
+<% if @companies.length < 1 %>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <h1 align="center">
+      There's nothing here!
+    </h1>
+    <p class="lead" align="center">
+      <%= link_to 'Add a company', new_company_path %> to get started.
     </p>
   </div>
 </div>
