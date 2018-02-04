@@ -55,6 +55,9 @@ end
 group :test do
   gem 'faker', '~> 1.8', '>= 1.8.7'
   gem 'capybara', '~> 2.17'
+  gem 'rails-controller-testing'
+  gem 'shoulda'
+  gem 'shoulda-matchers'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

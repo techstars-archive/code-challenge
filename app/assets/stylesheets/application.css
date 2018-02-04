@@ -31,3 +31,7 @@ body { padding-top: 10px; }
 .badge{
 	margin: 0px 5px 0px 5px;
 }
+
+#title{
+	color: #61267d;
+}
