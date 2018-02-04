@@ -10,7 +10,9 @@ class CompaniesController < ApplicationController
 	def create
 	  @company = Company.new(company_params)
 	  if @company.save
-	  	redirect_to root_url, notice: 'Company has been created successfully'
+	  	redirect_to root_url, flash: { success: 'Company has been created successfully' }
+	  else
+	  	render :new
 	  end
 	end
 
