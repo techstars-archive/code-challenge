@@ -19,6 +19,7 @@ feature 'edit company page' do
         expect(find('input[type="text"][name*="state"]').value).to have_content("#{company.state}")
         expect(find('input[type="text"][name*="founded_date"]').value).to have_content("#{company.founded_date}")
         expect(find('textarea[name*="description"]').value).to have_content("#{company.description}")
+        expect(find('input[type="text"][name*="category_list"]').value).to have_content("#{company.category_list}")
 
         fill_in('Company Name', with: 'Bitla Software Pvt. Ltd.')
 	    fill_in('City', with: 'Bangalore')
@@ -48,4 +49,6 @@ feature 'edit company page' do
 
 		expect(page).to have_content("can't be blank")
 	end
+    
+   
 end

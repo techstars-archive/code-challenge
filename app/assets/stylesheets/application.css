@@ -27,3 +27,7 @@ body { padding-top: 10px; }
     right: 400px;
     top: 83px;
 }
+
+.badge{
+	margin: 0px 5px 0px 5px;
+}

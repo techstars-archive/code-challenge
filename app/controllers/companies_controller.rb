@@ -32,6 +32,7 @@ class CompaniesController < ApplicationController
 	def show
 	  @company = Company.find(params[:id])
 	  @founders = Founder.where(company_id: @company.id)
+	  @tags = @company.category_list.split(',')
 	end
 
 	def destroy
@@ -44,7 +45,7 @@ class CompaniesController < ApplicationController
 	private
 
 	def company_params
-	  params.require(:company).permit(:name, :city, :state, :founded_date, :description)
+	  params.require(:company).permit(:name, :city, :state, :founded_date, :description, :category_list)
 	end
 
 end

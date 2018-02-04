@@ -10,6 +10,7 @@ feature 'company page' do
         expect(page).to have_content("#{company.state}")
         expect(page).to have_content("#{company.founded_date.strftime('%B %d, %Y')}")
         expect(page).to have_content("#{company.description}")
+        expect(page).to have_content("#{company.category_list}")
         expect(page).to have_content("Edit")
         expect(page).to have_content("Delete")
     end

@@ -23,7 +23,6 @@ feature 'founder of a company' do
            have_content("#{company.state}")
            have_content("#{company.founded_date.strftime('%B %d, %Y')}")
            have_content("#{company.description}")
-           have_content('Founders')
            have_content('Founder Name')
            have_content('Title')
 
