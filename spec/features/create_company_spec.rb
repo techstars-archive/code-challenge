@@ -25,7 +25,7 @@ feature 'create new company' do
 	    expect(Company.last.name).to eq('Bitla Software Pvt. Ltd.')
 	end
 
-	scenario '' do
+	scenario 'create new company without valid data' do
 		visit('/')
 		click_on('Add Company')
 
