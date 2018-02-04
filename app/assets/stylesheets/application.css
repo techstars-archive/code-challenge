@@ -17,3 +17,13 @@
  */
 
 body { padding-top: 10px; }
+
+.separator {
+    border-left: 3px solid #5f656d;
+    background: #16222c;
+    width: 1px;
+    height: 50px;
+    position: absolute;
+    right: 400px;
+    top: 83px;
+}

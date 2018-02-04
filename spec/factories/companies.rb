@@ -1,9 +1,9 @@
 FactoryGirl.define do
   factory :company do
-    name "MyString"
-    city "MyString"
-    state "MyString"
-    founded_date "2018-02-04"
-    description "MyText"
+    name { Faker::Company.name }
+    city { Faker::Address.city }
+    state { Faker::Address.state }
+    founded_date { Faker::Date.between(2.days.ago, Date.today) }
+    description { Faker::Lorem.paragraph }
   end
 end

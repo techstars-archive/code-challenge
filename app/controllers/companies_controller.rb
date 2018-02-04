@@ -16,6 +16,17 @@ class CompaniesController < ApplicationController
 	  end
 	end
 
+	def show
+	  @company = Company.find(params[:id])
+	end
+
+	def destroy
+	  @company = Company.find(params[:id])
+	  if @company.destroy
+	  	redirect_to root_url, flash: { success: 'Company has been deleted successfully' }
+	  end
+	end
+
 	private
 
 	def company_params
