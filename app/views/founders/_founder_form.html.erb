@@ -1,0 +1,30 @@
+<% if @founder.errors.any? %>
+    <div class="alert alert-danger alert-dismissable">
+      <button aria-hidden="true" class="close" data-dismiss="alert" type="button">&times;</button>
+      <h4><%= "#{pluralize(@founder.errors.count, "error")} prohibited this founder from being saved:" %></h4>
+      <ul>
+        <% @founder.errors.full_messages.each do |msg| %>
+          <li> <%= msg %> </li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>
+<%= form_for [@company, @founder] do |f| %>
+<div class="card my-4">
+  <h5 class="card-header">Founders</h5>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-lg-5">
+        <h5><%= f.label :name, "Founder Name" %> : <%= f.text_field :name, class: "form-control" %></h5>
+      </div>
+      <div class="col-lg-5">
+        <h5><%= f.label :title %>: <%= f.text_field :title, class: "form-control" %></h5>
+      </div>
+      <div class="col-lg-2" style="margin-top: 30px;">
+        <%= f.submit 'Add Founder', class: "btn btn-secondary" %>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
+               
