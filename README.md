@@ -1,24 +1,37 @@
-# README
+## Company Directory App ## 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**Technology Environment**
+* Ubuntu 14.04
+* Ruby 2.5.0
+* Rails 5.1.4
 
-Things you may want to cover:
+### How to build and run the application
 
-* Ruby version
+First fork and clone the repository then cd into the project directory
 
-* System dependencies
+Install gems
 
-* Configuration
+`bundle install --without production`
 
-* Database creation
+Create Database
 
-* Database initialization
+`bundle exec rake db:create`
 
-* How to run the test suite
+Run the Migrations
 
-* Services (job queues, cache servers, search engines, etc.)
+`bundle exec rake db:migrate`
 
-* Deployment instructions
+Now run the Test Suite
+**Acceptance Tests, Controller Tests** and **Model Tests** are covered
 
-* ...
+`bundle exec rspec`
+
+Got a GREEN signal? Start up your server now.
+
+`rails server`
+
+
+
+You can this app live also:
+
+https://companydirapp.herokuapp.com/
