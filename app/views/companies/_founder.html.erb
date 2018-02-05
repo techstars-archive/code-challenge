@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-md-12">
+
+    <div class="card my-4">
+      <h5 class="card-header">Founders</h5>
+      <div class="card-body">
+        <div class="row text-center">
+          
+            <% if @founders.present? %>
+            <% @founders.each do |founder| %>
+             <div class="col-lg-5">
+               <h5><%= founder.name %> : <span><%= founder.title %></span></h5>
+             </div>
+            <% end %>
+            <% else %>
+             "No founder has been added yet."
+            <% end %>
+           
+         
+        </div>
+         <div class="col-md-12" align="right">
+            <%= link_to "Add Founder", new_company_founders_path(@company), class: "btn btn-secondary" %>
+          </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

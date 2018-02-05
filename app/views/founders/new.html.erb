@@ -1,0 +1,19 @@
+<%= render 'founder_form' %>
+
+<div class="card my-4">
+  <div class="card-body">
+        <h2 class="card-title" style="text-align: center;"><%= @company.name %></h2><br>
+    <div class="row" align="center">
+    	<div class="col-sm-6" style="text-align: center;">
+    		<p><i class="fa fa-calendar"></i> <%= @company.founded_date.strftime("%B %d, %Y") %></p>
+    	</div>
+      <div class="col-sm-6" style="text-align: center;">
+          <p><i class="fa fa-calendar"></i> <%= @company.city %>, <%= @company.state %></p>
+      </div>
+     </div>
+    </div><br>
+    <div class="row" style="padding: 0px 30px 30px 30px;">
+      <p class="card-text"><%= @company.description.html_safe %></p>
+    </div>
+  </div>
+</div>

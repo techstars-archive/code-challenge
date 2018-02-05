@@ -1,0 +1,24 @@
+<div class="card my-4">
+  <div class="card-body">
+        <h2 class="card-title" style="text-align: center;"><%= @company.name %></h2><br>
+    <div class="row">
+    	<div class="col-sm-5" style="text-align: center;">
+    		<p><i class="fa fa-calendar"></i> <%= @company.founded_date.strftime("%B %d, %Y") %></p>
+    	</div>
+      <div class="col-sm-2" style="text-align: center;">
+          <p><i class="fa fa-map-marker"></i> <%= @company.city %>, <%= @company.state %></p>
+      </div>
+      <div class="separator"></div>
+      <div class="col-sm-5" style="text-align: center;">
+      <blockquote style="margin-top: -8px;">
+        <%= link_to 'Edit', edit_company_path(@company), class: "btn btn-secondary" %>
+        <%= link_to 'Delete', @company, method: :delete, data: { confirm: 'Are you sure to delete this company profile?' }, class: "btn btn-secondary" %>
+      </blockquote>
+      </div>
+    </div><br>
+    <p class="card-text"><%= @company.description.html_safe %></p>
+    <%= render 'founder' %>
+    <%= render 'categories' %>
+    
+  </div>
+</div>

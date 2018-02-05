@@ -1,0 +1,37 @@
+<div class="col-md-12" style="margin: 10px 5px 10px 5px" align="center">
+	<p> Welcome to
+	<h2 class="card-title"><span id="title">Company Directory App</span></h2>
+</div>
+<div class="col-md-12">
+ <% if @companies.present? %>
+   <% @companies.each do |company| %>
+     <div class="card mb-4">
+	    <div class="card-body">
+	      <div class="row">
+	        <div class="col-sm-6">
+	          <h2 class="card-title"><%= company.name %></h2>
+	        </div>
+
+	        <div class="col-sm-4" style="margin-top: 10px;">
+	          <p><i class="fa fa-map-marker"></i> <%= company.city %>, <%= company.state %></p>
+	        </div>
+	        
+	        <div class="col-sm-2" align="right">
+	          <%= link_to 'more...', company_path(company) %>
+	        </div>
+	      </div><br>
+	      <p class="card-text"><%= company.description.html_safe %></p>
+	      
+	    </div>
+	  </div>
+
+   <% end %>
+ <% else %>
+   " No company has been created yet."
+ <% end %>
+ 
+
+</div>
+<div class="col-md-12" style="margin-bottom:20px; " align="right">
+	<%=link_to "Add Company", new_company_path, class: "btn btn-warning" %>
+</div>

@@ -1,0 +1,26 @@
+<div class="col-md-12">
+	<% if @company.errors.any? %>
+        <div class="alert alert-danger alert-dismissable">
+          <button aria-hidden="true" class="close" data-dismiss="alert" type="button">&times;</button>
+          <h4><%= "#{pluralize(@company.errors.count, "error")} prohibited this company from being saved:" %></h4>
+          <ul>
+            <% @company.errors.full_messages.each do |msg| %>
+              <li> <%= msg %> </li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+  
+     
+  <div class="card my-4">
+    <h5 class="card-header">Editing <%= @company.name %></h5>
+    <br>
+    <%= render 'form' %>
+   </div>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.datepicker').datepicker({ format: 'yyyy/mm/dd' });
+  });
+</script>
