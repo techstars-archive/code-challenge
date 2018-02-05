@@ -1,6 +1,6 @@
 class Company < ApplicationRecord
-	validates :name, presence: true
-	has_one :founder
+	validates :name, :city, :state, :founded_date, :description, presence: true
+	has_many :founders
 	has_many :taggings
     has_many :categories, through: :taggings
 
